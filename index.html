@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cantanar{
+            display: flex;
+            text-align:center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        img{
+            width: 121px;
+            height: 121px;
+        }
+        button{
+            background-color: aqua;
+            margin-top: 45px;
+            display: block;
+            height: 39px;
+            width: 124px;
+            border-radius: 5px;
+            box-shadow: 2px 5px 6px -2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cantanar">
+        <div class="main">
+            <h2><b>Dice Roll</b></h2>
+            <img id="dice" src="Dice/Dice6.png" alt="" srcset="">
+            <button onclick="roll()" type="button">Roll</button>
+        </div>
+    </div>
+    <script>
+        let dice = document.getElementById("dice");
+        function roll(){
+            let rendumeDice = Math.floor(Math.random() * 6) + 1;
+            dice.src = 'Dice/Dice'+rendumeDice+'.png';
+            
+        }
+    </script>
+</body>
+</html>
